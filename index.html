@@ -1,0 +1,172 @@
+<!-- Api Key : https://api.dictionaryapi.dev/api/v2/entries/en/<word> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/footers/">
+
+  <title>World of Dict-Raj</title>
+  <style>
+    #pura_card {
+      background-image: url("https://source.unsplash.com/weekly?dictionary/1600x900");
+      height: 470px;
+      width: 1366px;
+      border-radius: 0px 0px 370px 0px;
+    }
+
+    .w-50.h-25.position-absolute.start-50.translate-middle.mb-3 {
+      top: 50%;
+    }
+
+    .input-group.w-50.position-absolute.top-30.start-50.translate-middle.mb-3 {
+      margin-top: 15%;
+    }
+
+    div#ncwlc {
+      margin-top: 20%;
+    }
+
+    div#ncwlc :hover {
+      transform: rotateZ(2deg);
+    }
+
+    div#ncwc {
+      margin-top: 20px;
+    }
+
+    div#ncwc :hover {
+      transform: rotateZ(2deg);
+    }
+
+    #footer {
+      position: fixed;
+      margin-bottom: 0;
+      bottom: 0;
+      width: 100%;
+      color: white;
+      text-align: center;
+    }
+  </style>
+  <script src="./script.js"></script>
+</head>
+
+<body class="bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Dict-Raj</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+  
+            
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+  <div id="pura_card">
+    <div class="
+          input-group
+          w-50
+          position-absolute
+          top-30
+          start-50
+          translate-middle
+          mb-3
+        ">
+      <input type="text" class="form-control" id="form-control" aria-describedby="button-addon2" />
+      <button class="btn btn-outline-primary" type="button" id="button-addon2" onclick="myfunc()">
+        Button
+      </button>
+    </div>
+  </div>
+  
+  <!-- Optional JavaScript; choose one of the two! -->
+  <div class="w-50 position-relative start-50 translate-middle-x mb-3">
+    <div id="ncwlc" hidden aria-hidden="true">
+      <div class="card">
+        <div class="card-header" id="tit"></div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p id="def"></p>
+            <footer class="blockquote-footer">
+              Example : <cite title="Source Title" id="pef"></cite>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+    <div id="ncwc" hidden aria-hidden="true">
+      <div class="card">
+        <div class="card-header"></div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p id="pit"></p>
+            <footer class="blockquote-footer">
+              Example : <cite title="Source Title" id="lef"></cite>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer  -->
+  <div id="footer">
+    <footer>
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+        <span class="text-muted">© 2021 Company, Inc</span>
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+              <use xlink:href="#twitter"></use>
+            </svg></a></li>
+        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+              <use xlink:href="#instagram"></use>
+            </svg></a></li>
+        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+              <use xlink:href="#facebook"></use>
+            </svg></a></li>
+      </ul>
+    </footer>
+  </div>
+
+
+
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+        -->
+
+</body>
+
+
+</html>
